@@ -1,0 +1,61 @@
+.main-banner {
+  padding-block: 20px;
+  @include max-768{
+    padding-block: 15px;
+  }
+}
+.banner-parent {
+  background-image: url("../images/main/01.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 758px;
+  @include max-1200 {
+    height: 600px;
+  }
+  @include max-768 {
+    height: 400px;
+  }
+  position: relative;
+}
+.banner-content {
+  position: absolute;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%);
+  bottom: 130px;
+  @include max-768 {
+    top: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+    padding-inline: 20px;
+  }
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    font-size: 72px;
+    @include max-992 {
+      font-size: 30px;
+    }
+
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+    @include max-768 {
+      margin-bottom: 25px;
+    }
+    text-align: center;
+  }
+  .shop-now {
+    color: #fff;
+    border: 2px solid #fff;
+    &:hover {
+      background-color: #fff;
+      color: #7863a7;
+    }
+  }
+}
